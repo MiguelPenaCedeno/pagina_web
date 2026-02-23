@@ -1,10 +1,10 @@
 :root {
-  --bg: #05040a;
-  --bg-elevated: #0b0a12;
-  --bg-soft: #141321;
-  --accent: #f25cff;
-  --accent-soft: rgba(242, 92, 255, 0.16);
-  --accent-secondary: #5cf2e2;
+  --bg: #0b0508;
+  --bg-elevated: #14070b;
+  --bg-soft: #1b0c12;
+  --accent: #ff3040;
+  --accent-soft: rgba(255, 48, 64, 0.18);
+  --accent-secondary: #b96bff;
   --text: #f8f7ff;
   --muted: #a2a0bf;
   --border-subtle: rgba(255, 255, 255, 0.08);
@@ -27,7 +27,9 @@ body {
 
 body {
   font-family: var(--font-main);
-  background: radial-gradient(circle at top left, #160b2f 0, #05040a 55%);
+  background:
+    radial-gradient(circle at top, #3e242c 0, transparent 55%),
+    radial-gradient(circle at bottom, #1b0c12 0, #050308 55%);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
 }
@@ -175,9 +177,9 @@ textarea {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 10% 0, rgba(242, 92, 255, 0.32), transparent 55%),
-    radial-gradient(circle at 85% 15%, rgba(92, 242, 226, 0.25), transparent 50%),
-    radial-gradient(circle at 50% 100%, rgba(22, 18, 45, 1), #05040a 58%);
+    radial-gradient(circle at 10% 0, rgba(255, 48, 64, 0.35), transparent 55%),
+    radial-gradient(circle at 85% 15%, rgba(185, 107, 255, 0.3), transparent 50%),
+    radial-gradient(circle at 50% 100%, rgba(32, 13, 23, 1), #050308 58%);
   opacity: 0.9;
   pointer-events: none;
 }
@@ -323,10 +325,10 @@ textarea {
   padding: 1.4rem;
   background: linear-gradient(
       145deg,
-      rgba(5, 4, 10, 0.96),
-      rgba(16, 12, 35, 0.98)
+      rgba(10, 4, 7, 0.96),
+      rgba(31, 10, 16, 0.98)
     ),
-    radial-gradient(circle at top right, rgba(92, 242, 226, 0.12), transparent);
+    radial-gradient(circle at top right, rgba(255, 48, 64, 0.22), transparent);
   box-shadow:
     0 24px 80px rgba(0, 0, 0, 0.6),
     0 0 0 1px rgba(255, 255, 255, 0.03);
@@ -341,10 +343,10 @@ textarea {
   height: 260px;
   background-image: linear-gradient(
       -45deg,
-      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0)
     ),
-    url("https://images.pexels.com/photos/164745/pexels-photo-164745.jpeg?auto=compress&cs=tinysrgb&w=1200");
+    url("./assets/kidchen-quejas-cover.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -423,7 +425,7 @@ audio {
 }
 
 .section-dark {
-  background: radial-gradient(circle at top, #101227 0, #05040a 52%);
+  background: radial-gradient(circle at top, #2a1016 0, #050308 52%);
 }
 
 .two-column {
@@ -505,8 +507,8 @@ audio {
 }
 
 .platform-btn:hover {
-  background: rgba(25, 19, 47, 0.95);
-  border-color: rgba(242, 92, 255, 0.7);
+  background: rgba(40, 12, 18, 0.95);
+  border-color: rgba(255, 48, 64, 0.7);
   transform: translateY(-1px);
 }
 
@@ -549,6 +551,48 @@ audio {
   text-align: left;
   max-width: 540px;
   margin-bottom: 2.3rem;
+}
+
+.center-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.6rem;
+}
+
+.center-cta .primary-btn,
+.center-cta .secondary-btn {
+  padding: 0.7rem 1.2rem;
+}
+
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.merch-card {
+  margin: 0;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(10, 4, 7, 0.6);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+}
+
+.merch-card img {
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  filter: contrast(1.05) saturate(1.05);
+}
+
+.merch-card figcaption {
+  padding: 0.75rem 0.9rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .dates-grid {
@@ -786,6 +830,10 @@ audio {
   }
 
   .dates-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .merch-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
