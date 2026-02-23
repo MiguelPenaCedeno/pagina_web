@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kidchen - Nuevo Lanzamiento</title>
+    <meta
+      name="description"
+      content="Landing oficial del nuevo lanzamiento musical de Kidchen. Descubre el single, mira el videoclip y sé el primero en enterarte de todas las novedades."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <span class="logo-mark">K</span>
+          <span class="logo-text">Kidchen</span>
+        </div>
+        <nav class="nav">
+          <a href="#lanzamiento">Lanzamiento</a>
+          <a href="#escucha">Escucha</a>
+          <a href="#fechas">Fechas</a>
+          <a href="#suscripcion">Suscríbete</a>
+        </nav>
+        <button class="ghost-btn" id="scrollToListen">Escuchar ahora</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <div class="hero-text">
+            <p class="eyebrow">Nuevo single</p>
+            <h1>“Midnight Kitchen”</h1>
+            <p class="hero-subtitle">
+              La banda <strong>Kidchen</strong> regresa con un sonido nocturno,
+              crudo y eléctrico. Una mezcla de indie, synth y ruido de ollas a
+              media noche.
+            </p>
+            <div class="hero-cta">
+              <a href="#escucha" class="primary-btn">Escuchar adelanto</a>
+              <a href="#suscripcion" class="secondary-btn">Recibir noticias</a>
+            </div>
+            <div class="hero-meta">
+              <div class="meta-item">
+                <span class="meta-label">Lanzamiento oficial</span>
+                <!-- Ajusta esta fecha a la real -->
+                <span class="meta-value" id="releaseDateLabel"
+                  >15 · MAR · 2026</span
+                >
+              </div>
+              <div class="meta-item meta-countdown">
+                <span class="meta-label">Cuenta regresiva</span>
+                <div class="countdown" id="countdown">
+                  <div class="time-block">
+                    <span class="time" id="days">--</span>
+                    <span class="label">Días</span>
+                  </div>
+                  <div class="time-block">
+                    <span class="time" id="hours">--</span>
+                    <span class="label">Horas</span>
+                  </div>
+                  <div class="time-block">
+                    <span class="time" id="minutes">--</span>
+                    <span class="label">Min</span>
+                  </div>
+                  <div class="time-block">
+                    <span class="time" id="seconds">--</span>
+                    <span class="label">Seg</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="cover-art">
+              <div class="cover-gradient"></div>
+              <div class="cover-info">
+                <span class="tag">Kidchen</span>
+                <h2>Midnight Kitchen</h2>
+                <p>Single · 2026</p>
+              </div>
+            </div>
+            <div class="track-preview">
+              <p class="track-title">Track adelanto</p>
+              <p class="track-name">Burning Pans (Preview)</p>
+              <audio controls preload="none">
+                <!-- Reemplaza src con tu audio real -->
+                <source src="preview.mp3" type="audio/mpeg" />
+                Tu navegador no soporta el reproductor de audio.
+              </audio>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN LANZAMIENTO -->
+      <section class="section" id="lanzamiento">
+        <div class="container two-column">
+          <div>
+            <p class="eyebrow">Sobre el lanzamiento</p>
+            <h2>Una banda de cocina, ruido y neón</h2>
+            <p>
+              Kidchen nació entre ollas, cables y sintetizadores. Su nuevo
+              lanzamiento captura esa energía caótica de cocinar a las 2 AM
+              mientras las ideas aparecen sin permiso.
+            </p>
+            <p>
+              “Midnight Kitchen” combina ritmos bailables, guitarras afiladas y
+              capas de sintetizadores con letras que hablan de noches largas,
+              amistades rotas y recetas improvisadas.
+            </p>
+          </div>
+          <div class="feature-grid">
+            <div class="feature">
+              <span class="feature-tag">Sonido</span>
+              <h3>Indie · Electro · Nocturno</h3>
+              <p>
+                Un viaje que mezcla bases electrónicas con guitarras crudas y
+                voces enérgicas.
+              </p>
+            </div>
+            <div class="feature">
+              <span class="feature-tag">Visual</span>
+              <h3>Estética neón & glitch</h3>
+              <p>
+                Un universo visual entre neones morados, texturas de acero y
+                humo de cocina.
+              </p>
+            </div>
+            <div class="feature">
+              <span class="feature-tag">Experiencia</span>
+              <h3>Show en vivo inmersivo</h3>
+              <p>
+                Un directo donde la cocina se convierte en escenario y los
+                utensilios en instrumentos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESCUCHA / VIDEO -->
+      <section class="section section-dark" id="escucha">
+        <div class="container two-column reverse">
+          <div>
+            <p class="eyebrow">Escucha / Mira</p>
+            <h2>Primer adelanto del single</h2>
+            <p>
+              Reproduce el adelanto directamente desde esta página o guárdalo en
+              tu plataforma favorita. Comparte el track con tu crew nocturno.
+            </p>
+            <div class="platform-buttons">
+              <a href="#" class="platform-btn">
+                <span class="dot dot-green"></span> Spotify
+              </a>
+              <a href="#" class="platform-btn">
+                <span class="dot dot-white"></span> Apple Music
+              </a>
+              <a href="#" class="platform-btn">
+                <span class="dot dot-red"></span> YouTube
+              </a>
+            </div>
+          </div>
+          <div class="video-frame">
+            <!-- Reemplaza el src con el link real de YouTube -->
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID"
+              title="Videoclip Kidchen - Midnight Kitchen"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- FECHAS -->
+      <section class="section" id="fechas">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Próximas fechas</p>
+            <h2>Presentaciones en vivo</h2>
+            <p>
+              Sé parte de las primeras noches donde “Midnight Kitchen” cobra
+              vida en el escenario.
+            </p>
+          </div>
+          <div class="dates-grid">
+            <article class="date-card">
+              <div class="date-main">
+                <div class="date-badge">
+                  <span class="date-day">15</span>
+                  <span class="date-month">MAR</span>
+                </div>
+                <div>
+                  <h3>Ciudad de México</h3>
+                  <p>Foro Neón · 21:00</p>
+                </div>
+              </div>
+              <p class="date-extra">Entradas limitadas · Show lanzamiento</p>
+            </article>
+            <article class="date-card">
+              <div class="date-main">
+                <div class="date-badge">
+                  <span class="date-day">22</span>
+                  <span class="date-month">MAR</span>
+                </div>
+                <div>
+                  <h3>Buenos Aires</h3>
+                  <p>Sala Subsuelo · 20:30</p>
+                </div>
+              </div>
+              <p class="date-extra">Invitados sorpresa · Edición especial</p>
+            </article>
+            <article class="date-card">
+              <div class="date-main">
+                <div class="date-badge">
+                  <span class="date-day">29</span>
+                  <span class="date-month">MAR</span>
+                </div>
+                <div>
+                  <h3>Santiago</h3>
+                  <p>Teatro Industrial · 21:00</p>
+                </div>
+              </div>
+              <p class="date-extra">Visuales exclusivos · Merch limitado</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUSCRIPCIÓN -->
+      <section class="section section-dark" id="suscripcion">
+        <div class="container two-column">
+          <div>
+            <p class="eyebrow">Sé el primero en enterarte</p>
+            <h2>Suscríbete al newsletter de Kidchen</h2>
+            <p>
+              Anuncios de shows, nuevo merch, lanzamientos y contenido exclusivo
+              desde la cocina de la banda directo a tu bandeja de entrada.
+            </p>
+            <ul class="bullet-list">
+              <li>Contenido exclusivo detrás de cámaras</li>
+              <li>Acceso anticipado a entradas</li>
+              <li>Descuentos en merch limitado</li>
+            </ul>
+          </div>
+          <div class="card card-form">
+            <form id="subscribeForm" novalidate>
+              <label class="field">
+                <span>Nombre</span>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Tu nombre"
+                  required
+                />
+              </label>
+              <label class="field">
+                <span>Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="tucorreo@email.com"
+                  required
+                />
+              </label>
+              <label class="field checkbox">
+                <input type="checkbox" name="privacy" required />
+                <span>
+                  Acepto recibir comunicaciones de Kidchen y he leído la
+                  política de privacidad.
+                </span>
+              </label>
+              <button type="submit" class="primary-btn full-width">
+                Quiero recibir novedades
+              </button>
+              <p class="form-note" id="formMessage">
+                No haremos spam. Puedes darte de baja cuando quieras.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <p>&copy; <span id="year"></span> Kidchen. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-right">
+          <a href="#" aria-label="Instagram de Kidchen">Instagram</a>
+          <a href="#" aria-label="TikTok de Kidchen">TikTok</a>
+          <a href="#" aria-label="YouTube de Kidchen">YouTube</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+  </html>
+
