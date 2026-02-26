@@ -5,35 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ríos de Ceniza</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="logo">rios de ceniza</a>
+    <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about" class="nav-link">Nosotros</a></li>
+      <li><a href="#music" class="nav-link">Música</a></li>
+      <li><a href="#shows" class="nav-link">Shows</a></li>
+      <li><a href="#contact" class="nav-link">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- MOBILE OVERLAY -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+
   <!-- HERO -->
   <header class="hero">
-    <nav class="navbar">
-      <span class="logo">rios de ceniza</span>
-      <ul class="nav-links">
-        <li><a href="#about">Nosotros</a></li>
-        <li><a href="#music">Música</a></li>
-        <li><a href="#shows">Shows</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </nav>
-    <div class="hero-content">
-      <h1 class="band-name">Ríos de Ceniza</h1>
-      <p class="tagline">Blackgaze · Screamo · Jazz · Bogotá, Colombia</p>
-      <a href="#music" class="btn-primary">Escuchar</a>
+    <div class="hero-bg">
+      <div class="hero-grain"></div>
+      <div class="hero-glow hero-glow--1"></div>
+      <div class="hero-glow hero-glow--2"></div>
+      <div class="hero-glow hero-glow--3"></div>
     </div>
-    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Bogotá, Colombia · Est. 2022</p>
+      <h1 class="band-name reveal reveal--delay-1">Ríos de<br>Ceniza</h1>
+      <p class="tagline reveal reveal--delay-2">
+        <span>Blackgaze</span>
+        <span class="tagline-sep">·</span>
+        <span>Screamo</span>
+        <span class="tagline-sep">·</span>
+        <span>Jazz</span>
+        <span class="tagline-sep">·</span>
+        <span>Post-Metal</span>
+      </p>
+      <a href="#music" class="btn-primary reveal reveal--delay-3">
+        <span>Escuchar</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Ir abajo">
+      <span></span>
+    </a>
   </header>
 
   <!-- ABOUT -->
   <section id="about" class="section about">
     <div class="container">
-      <h2 class="section-title">Nosotros</h2>
+      <div class="section-header js-reveal">
+        <span class="section-label">001</span>
+        <h2 class="section-title">Nosotros</h2>
+      </div>
       <div class="about-grid">
-        <div class="about-text">
+        <div class="about-text js-reveal">
           <p>
             Ríos de Ceniza nació el 11 de junio de 2022 en Bogotá, Colombia.
             Una amalgama de blackgaze, screamo, post-metal y jazz que construye
@@ -46,13 +79,16 @@
             piano y voces que oscilan entre lo susurrado y lo visceral.
           </p>
         </div>
-        <div class="about-tags">
-          <span class="tag">Blackgaze</span>
-          <span class="tag">Screamo</span>
-          <span class="tag">Post-Metal</span>
-          <span class="tag">Jazz</span>
-          <span class="tag">Underground</span>
-          <span class="tag">Bogotá</span>
+        <div class="about-right js-reveal">
+          <div class="about-tags">
+            <span class="tag">Blackgaze</span>
+            <span class="tag">Screamo</span>
+            <span class="tag">Post-Metal</span>
+            <span class="tag">Jazz</span>
+            <span class="tag">Underground</span>
+            <span class="tag">Bogotá</span>
+          </div>
+          <div class="about-line"></div>
         </div>
       </div>
     </div>
@@ -61,36 +97,66 @@
   <!-- MUSIC -->
   <section id="music" class="section music">
     <div class="container">
-      <h2 class="section-title">Discografía</h2>
+      <div class="section-header js-reveal">
+        <span class="section-label">002</span>
+        <h2 class="section-title">Discografía</h2>
+      </div>
       <div class="albums-grid">
 
-        <div class="album-card">
-	  <img src="assets/images/Lahar_portada.jpg" 
-		alt="Lahar - rios de ceniza"
-		class="album-art" />
+        <div class="album-card js-reveal">
+          <div class="album-art-wrapper">
+            <img
+              src="assets/images/Lahar_portada.jpg"
+              alt="Lahar — Ríos de Ceniza (2025)"
+              class="album-art"
+              loading="lazy"
+            />
+            <div class="album-art-overlay">
+              <a href="https://riosdeceniza.bandcamp.com/album/lahar" target="_blank" rel="noopener" class="album-listen-btn">
+                Escuchar en Bandcamp
+              </a>
+            </div>
+          </div>
           <div class="album-info">
-            <h3>Lahar</h3>
-            <p class="album-year">2025</p>
-            <ul class="tracklist">
-              <li>01. Basalto</li>
-              <li>02. Brecha</li>
-              <li>03. Mármol</li>
-              <li>04. Caliza</li>
-              <li>05. Vitrea</li>
-            </ul>
-            <a href="https://riosdeceniza.bandcamp.com/album/lahar" target="_blank" class="btn-secondary">Bandcamp</a>
+            <div class="album-meta">
+              <h3 class="album-title">Lahar</h3>
+              <p class="album-year">2025</p>
+            </div>
+            <ol class="tracklist">
+              <li><span class="track-num">01</span> Basalto</li>
+              <li><span class="track-num">02</span> Brecha</li>
+              <li><span class="track-num">03</span> Mármol</li>
+              <li><span class="track-num">04</span> Caliza</li>
+              <li><span class="track-num">05</span> Vitrea</li>
+            </ol>
+            <a href="https://riosdeceniza.bandcamp.com/album/lahar" target="_blank" rel="noopener" class="btn-secondary">
+              Bandcamp
+            </a>
           </div>
         </div>
 
-        <div class="album-card">
-          <div class="album-art album-art--live" aria-label="Live album art"></div>
+        <div class="album-card js-reveal js-reveal--delay">
+          <div class="album-art-wrapper">
+            <div class="album-art album-art--live" role="img" aria-label="Live sets artwork"></div>
+            <div class="album-art-overlay">
+              <a href="https://www.youtube.com/watch?v=Il007C-wJO8&list=PLn3_xxJIHwwCBXS3Mva6lMknMXuGIr1LI" target="_blank" rel="noopener" class="album-listen-btn">
+                Ver en YouTube
+              </a>
+            </div>
+          </div>
           <div class="album-info">
-            <h3>Sets en vivo</h3>
-            <p class="album-year">2022 - 2026</p>
-            <ul class="tracklist">
-              <li>Live sets completos</li>
-            </ul>
-            <a href="https://www.youtube.com/watch?v=Il007C-wJO8&list=PLn3_xxJIHwwCBXS3Mva6lMknMXuGIr1LI" target="_blank" class="btn-secondary">Youtube</a>
+            <div class="album-meta">
+              <h3 class="album-title">Sets en Vivo</h3>
+              <p class="album-year">2022 — 2026</p>
+            </div>
+            <ol class="tracklist">
+              <li><span class="track-num">—</span> Live sets completos</li>
+              <li><span class="track-num">—</span> Escena underground bogotana</li>
+              <li><span class="track-num">—</span> Presentaciones 2022–2026</li>
+            </ol>
+            <a href="https://www.youtube.com/watch?v=Il007C-wJO8&list=PLn3_xxJIHwwCBXS3Mva6lMknMXuGIr1LI" target="_blank" rel="noopener" class="btn-secondary">
+              YouTube
+            </a>
           </div>
         </div>
 
@@ -101,34 +167,116 @@
   <!-- SHOWS -->
   <section id="shows" class="section shows">
     <div class="container">
-      <h2 class="section-title">Shows</h2>
-      <div class="shows-list">
+      <div class="section-header js-reveal">
+        <span class="section-label">003</span>
+        <h2 class="section-title">Shows</h2>
+      </div>
+      <div class="shows-list js-reveal">
         <div class="show-item">
-          <span class="show-date">Por anunciar</span>
-          <span class="show-venue">Bogotá, Colombia</span>
+          <div class="show-left">
+            <span class="show-date">Por anunciar</span>
+            <span class="show-venue">Bogotá, Colombia</span>
+          </div>
           <span class="show-status">Próximamente</span>
         </div>
       </div>
-      <p class="shows-note">Síguenos en Instagram para fechas actualizadas.</p>
+      <p class="shows-note js-reveal">
+        Síguenos en
+        <a href="https://www.instagram.com/rios_de_ceniza/" target="_blank" rel="noopener">Instagram</a>
+        para fechas actualizadas.
+      </p>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="section contact">
     <div class="container">
-      <h2 class="section-title">Contacto</h2>
-      <div class="social-links">
-        <a href="https://www.instagram.com/rios_de_ceniza/" target="_blank" class="social-btn">Instagram</a>
-        <a href="https://soundcloud.com/rios-de-ceniza" target="_blank" class="social-btn">SoundCloud</a>
-        <a href="https://riosdeceniza.bandcamp.com" target="_blank" class="social-btn">Bandcamp</a>
-        <a href="https://open.spotify.com/artist/3pQGh4pxIafDufvj6LcH2y" target="_blank" class="social-btn">Spotify</a>
+      <div class="section-header js-reveal">
+        <span class="section-label">004</span>
+        <h2 class="section-title">Contacto</h2>
+      </div>
+      <p class="contact-sub js-reveal">Escríbenos o encuéntranos en nuestras redes.</p>
+      <div class="social-links js-reveal">
+        <a href="https://www.instagram.com/rios_de_ceniza/" target="_blank" rel="noopener" class="social-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          Instagram
+        </a>
+        <a href="https://soundcloud.com/rios-de-ceniza" target="_blank" rel="noopener" class="social-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.044 0-.88.012-.88.055 0 .044.003.088.003.133L.65 14l-.352-1.587c0-.045.003-.089.003-.133 0-.043-.003-.055-.088-.055C.096 12.225 0 12.32 0 12.439v3.092c0 .12.096.214.213.214.118 0 .213-.094.213-.214v-1.89l.3 1.407c.022.1.112.17.213.17.1 0 .19-.07.212-.17l.3-1.407v1.89c0 .12.095.214.213.214.117 0 .213-.094.213-.214v-3.092c0-.12-.096-.214-.213-.214l-.3.001zM2.886 11.4c-.204 0-.37.165-.37.37v3.77c0 .205.166.37.37.37.206 0 .37-.165.37-.37v-3.77c0-.205-.164-.37-.37-.37zm1.263-.53c-.2 0-.37.165-.37.37v4.3c0 .205.165.37.37.37.204 0 .37-.165.37-.37v-4.3c0-.205-.165-.37-.37-.37zm1.263.26c-.2 0-.37.164-.37.37v4.04c0 .204.165.37.37.37.205 0 .37-.166.37-.37v-4.04c0-.206-.165-.37-.37-.37zm1.264-.53c-.205 0-.37.164-.37.37v4.57c0 .205.165.37.37.37.204 0 .37-.165.37-.37v-4.57c0-.205-.165-.37-.37-.37zm1.263.18c-.205 0-.37.166-.37.37v4.39c0 .205.165.37.37.37.204 0 .37-.165.37-.37v-4.39c0-.204-.166-.37-.37-.37zm3.79-1.3a3.45 3.45 0 00-3.006 1.745.71.71 0 00-.44-.15.72.72 0 00-.72.72v3.68c0 .4.32.72.72.72.396 0 .72-.32.72-.72V12.56a2.73 2.73 0 012.726-2.726 2.73 2.73 0 012.726 2.726v2.975c0 .4.322.72.72.72.4 0 .72-.32.72-.72v-2.975a4.17 4.17 0 00-4.17-4.17h.004z"/></svg>
+          SoundCloud
+        </a>
+        <a href="https://riosdeceniza.bandcamp.com" target="_blank" rel="noopener" class="social-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M0 18.75l7.437-13.5H24l-7.438 13.5z"/></svg>
+          Bandcamp
+        </a>
+        <a href="https://open.spotify.com/artist/3pQGh4pxIafDufvj6LcH2y" target="_blank" rel="noopener" class="social-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+          Spotify
+        </a>
       </div>
     </div>
   </section>
 
   <footer class="footer">
-    <p>&copy; 2026 Ríos de Ceniza · Bogotá, Colombia</p>
+    <div class="footer-inner">
+      <span class="footer-logo">rios de ceniza</span>
+      <p class="footer-copy">&copy; 2026 Ríos de Ceniza · Bogotá, Colombia</p>
+    </div>
   </footer>
+
+  <script>
+    // ─── NAVBAR SCROLL BEHAVIOR ───────────────────────────────────────
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('navbar--scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // ─── HAMBURGER MENU ───────────────────────────────────────────────
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    const overlay   = document.getElementById('nav-overlay');
+
+    function closeMenu() {
+      hamburger.classList.remove('is-open');
+      navLinks.classList.remove('is-open');
+      overlay.classList.remove('is-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', () => {
+      const open = hamburger.classList.toggle('is-open');
+      navLinks.classList.toggle('is-open', open);
+      overlay.classList.toggle('is-open', open);
+      hamburger.setAttribute('aria-expanded', String(open));
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    overlay.addEventListener('click', closeMenu);
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // ─── SCROLL REVEAL ────────────────────────────────────────────────
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.js-reveal').forEach(el => observer.observe(el));
+
+    // ─── HERO REVEAL ON LOAD ─────────────────────────────────────────
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.reveal').forEach((el, i) => {
+        setTimeout(() => el.classList.add('is-visible'), i * 150 + 200);
+      });
+    });
+  </script>
 
 </body>
 </html>
